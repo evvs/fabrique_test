@@ -1,5 +1,5 @@
 <template>
-  <div id="dynamic-component-demo" class="demo">
+  <div class="wrapper">
     <button
       v-for="tab of tabs"
       :key="tab"
@@ -9,13 +9,20 @@
     >
       {{ tab }}
     </button>
-
-    <!-- <component :is="currentTabComponent" class="tab"></component> -->
+    <section class="tabs-body">
+      <!-- <component :is="currentTabComponent" class="tab"></component> -->
+      <Respondents />
+    </section>
   </div>
 </template>
 
 <script>
+import Respondents from '../PollsTabs/Respondents'
+
 export default {
+  components: {
+    Respondents,
+  },
   data() {
     return {
       currentTab: 'Параметры',
@@ -42,5 +49,12 @@ export default {
   color: black;
   font-weight: bold;
   border-bottom: 2px solid #dcff47;
+}
+.wrapper {
+  height: 100%;
+}
+.tabs-body {
+  height: 100%;
+  box-shadow: 0px 2px 5px 0px #d6d6d6;
 }
 </style>
