@@ -29,7 +29,7 @@ export default {
   fontawesome: {
     icons: {
       regular: ['faFileAlt', 'faUser', 'faFlag'],
-      solid: ['faPhoneAlt'],
+      solid: ['faPhoneAlt', 'faSearch'],
     },
   },
   // Modules (https://go.nuxtjs.dev/config-modules)
