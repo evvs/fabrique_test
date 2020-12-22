@@ -57,7 +57,6 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  // background-color: rgba(0, 0, 255, 0.171);
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
@@ -99,7 +98,7 @@ nav {
       }
     }
     .link-icon {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
     }
   }
 }

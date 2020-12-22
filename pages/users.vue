@@ -1,24 +1,15 @@
 <template>
-  <div class="container">
-    <img src="@/assets/soonstamp.svg" alt="coming-soon" />
-  </div>
+  <ComingSoon />
 </template>
 
 <script>
-export default {}
+import ComingSoon from '@/components/ComingSoon'
+
+export default {
+  components: {
+    ComingSoon,
+  },
+}
 </script>
 
-<style lang="scss" scoped>
-.container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-img {
-  max-width: 30%;
-  @media screen and (max-width: 576px) {
-    max-width: 80%;
-  }
-}
-</style>
+<style></style>
