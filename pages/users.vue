@@ -1,0 +1,24 @@
+<template>
+  <div class="container">
+    <img src="@/assets/soonstamp.svg" alt="coming-soon" />
+  </div>
+</template>
+
+<script>
+export default {}
+</script>
+
+<style lang="scss" scoped>
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  max-width: 30%;
+  @media screen and (max-width: 576px) {
+    max-width: 80%;
+  }
+}
+</style>
