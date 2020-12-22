@@ -14,7 +14,7 @@ export default {
   watch: {
     timeToRedirect() {
       if (this.timeToRedirect === 0) {
-        this.$router.replace({ path: '/polls' })
+        this.redtirectToPolls()
       }
     },
   },
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     redtirectToPolls() {
-      this.$router.replace({ path: '/polls' })
+      this.$router.replace({ path: 'polls' })
     },
   },
 }

@@ -21,12 +21,15 @@ export default {
 <style lang="scss" scoped>
 .grid-container {
   padding: 10px;
+  padding-left: 15%;
+  padding-right: 15%;
   height: 100vh;
   display: grid;
   grid-template-columns: 95px 1fr;
   grid-template-rows: 100px 1fr 100px 100px;
 
   .main-container {
+    margin-left: 50px;
     grid-row-start: 2;
     grid-row-end: 4;
   }

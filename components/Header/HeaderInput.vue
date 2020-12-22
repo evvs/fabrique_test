@@ -15,19 +15,18 @@ export default {
     }
   },
   methods: {
-    onSubmit() {
-      console.log(this.search)
-    },
+    onSubmit() {},
   },
 }
 </script>
 
 <style lang="scss" scoped>
 form {
-  width: 35%;
+  width: 50%;
   font-size: 0;
   display: flex;
   flex-wrap: nowrap;
+  padding-top: 5px;
 }
 input {
   flex-grow: 1;
