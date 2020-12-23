@@ -27,12 +27,17 @@ export default {
     display: flex;
     width: 70%;
     .deleteBtn {
+      cursor: pointer;
       margin-left: auto;
       color: rgb(173, 0, 0);
       background: transparent;
       border: 1px solid rgb(173, 0, 0);
       border-radius: 5px;
       padding: 5px;
+      &:hover {
+        color: white;
+        background-color: rgb(173, 0, 0);
+      }
     }
   }
 }

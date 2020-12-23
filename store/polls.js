@@ -18,7 +18,12 @@ export const mutations = {
     state.conditionals = state.conditionals.filter((c) => c.id !== id)
     state.conditionalsOptions = _.omit(state.conditionalsOptions, id)
   },
-  changeType(state, id) {},
+  changeType(state, payload) {
+    const { id, type } = payload
+    const condition = state.conditionals.find((e) => e.id === id)
+    condition.type = type
+    state.conditionalsOptions[id].options = []
+  },
 }
 
 export const getters = {

@@ -1,6 +1,6 @@
 <template>
   <div class="init-container">
-    <TemplateHeader :id="id" :order-number="orderNumber" />
+    <TemplateHeader :id="id" :order-number="orderNumber" :type="type" />
     <TemplateButtons :id="id" />
   </div>
 </template>
@@ -13,6 +13,7 @@ export default {
   props: {
     id: { type: String, required: true },
     orderNumber: { type: Number, required: true },
+    type: { type: String, required: true },
   },
   component: {
     TemplateHeader,

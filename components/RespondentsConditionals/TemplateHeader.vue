@@ -2,11 +2,11 @@
   <div class="template-header">
     <div v-show="orderNumber !== 1" class="and">И</div>
     <p>Условие {{ orderNumber }}</p>
-    <select v-model="selected">
-      <option disabled value="">Выберите условие</option>
-      <option>Возраст респондента</option>
-      <option>Тип карты лояльности</option>
-      <option>Статус карты лояльности</option>
+    <select v-model="paymentMethod">
+      <option disabled value="init">Выберите условие</option>
+      <option value="resage">Возраст респондента</option>
+      <option value="cardtype">Тип карты лояльности</option>
+      <option value="cardstatus">Статус карты лояльности</option>
     </select>
   </div>
 </template>
@@ -16,11 +16,20 @@ export default {
   props: {
     id: { type: String, required: true },
     orderNumber: { type: Number, required: true },
+    type: { type: String, required: true },
   },
-  data() {
-    return {
-      selected: '',
-    }
+  computed: {
+    paymentMethod: {
+      get() {
+        return this.type
+      },
+      set(value) {
+        this.$store.commit('polls/changeType', {
+          id: this.id,
+          type: value,
+        })
+      },
+    },
   },
 }
 </script>
