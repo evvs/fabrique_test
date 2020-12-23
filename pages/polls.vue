@@ -95,7 +95,7 @@ footer {
   padding: 0 25px;
   align-items: center;
   justify-content: space-between;
-  background: #edf0ef;
+  background: #f5f2f2;
   .next-btn {
     padding: 5px;
     border: none;
@@ -111,6 +111,10 @@ footer {
     border-radius: 5px;
     background-color: white;
     color: #0c9f27;
+  }
+  .next-btn:hover,
+  .test-poll-btn:hover {
+    box-shadow: 0px 0px 0px 3px #b7b7b7;
   }
 }
 p.add-poll {

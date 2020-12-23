@@ -28,7 +28,7 @@ export default {
   ],
   fontawesome: {
     icons: {
-      regular: ['faFileAlt', 'faUser', 'faFlag'],
+      regular: ['faFileAlt', 'faUser', 'faFlag', 'faTrashAlt'],
       solid: ['faPhoneAlt', 'faSearch'],
     },
   },
