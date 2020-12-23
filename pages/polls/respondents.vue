@@ -1,13 +1,13 @@
 <template>
-  <Respondents />
+  <RespondentsConditionals />
 </template>
 
 <script>
-import Respondents from '@/components/PollsTabs/Respondents'
+import RespondentsConditionals from '@/components/RespondentsConditionals'
 
 export default {
   components: {
-    Respondents,
+    RespondentsConditionals,
   },
 }
 </script>

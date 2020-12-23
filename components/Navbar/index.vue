@@ -64,7 +64,8 @@ nav {
   grid-row-end: 3;
   border-right: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
-  border-radius: 0 0 5px 0;
+  border-left: 1px solid #e6e6e6;
+  border-radius: 0 0 5px 5px;
 
   .nav-buttons {
     min-height: 100px;

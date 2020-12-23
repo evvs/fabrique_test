@@ -12,6 +12,8 @@
       </button>
     </div>
     <div class="container">
+      <p class="add-poll">Добавить опрос</p>
+
       <section class="tabs-body">
         <nuxt-child />
       </section>
@@ -76,12 +78,14 @@ export default {
   flex-direction: column;
 }
 .tabs-body {
-  flex-grow: 1;
+  height: 100%;
+  overflow: auto;
 }
 .container {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   border-radius: 5px;
   box-shadow: 0px 3px 4px 1px #eaeaea;
 }
@@ -108,5 +112,12 @@ footer {
     background-color: white;
     color: #0c9f27;
   }
+}
+p.add-poll {
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #fcfcfc;
+  color: #c5c5c5;
+  font-weight: bold;
 }
 </style>
