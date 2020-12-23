@@ -116,7 +116,6 @@ footer {
 p.add-poll {
   padding-top: 20px;
   padding-left: 20px;
-  background-color: #fcfcfc;
   color: #c5c5c5;
   font-weight: bold;
 }

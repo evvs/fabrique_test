@@ -1,6 +1,6 @@
 <template>
   <div class="flex-container">
-    <img src="@/assets/soonstamp.svg" alt="coming-soon" />
+    <img src="@/assets/asap.svg" alt="coming-soon" />
   </div>
 </template>
 
