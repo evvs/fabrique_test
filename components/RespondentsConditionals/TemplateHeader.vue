@@ -1,5 +1,6 @@
 <template>
   <div class="template-header">
+    <div v-show="orderNumber !== 1" class="and">И</div>
     <p>Условие {{ orderNumber }}</p>
     <select v-model="selected">
       <option disabled value="">Выберите условие</option>
@@ -41,6 +42,15 @@ export default {
       outline: none;
       border: 1px solid yellow;
     }
+  }
+  .and {
+    position: absolute;
+    display: inline-block;
+    padding: 5px 15px;
+    top: -15px;
+    left: 20px;
+    border: 1px solid rgba(224, 224, 224, 0.5);
+    border-radius: 10px;
   }
 }
 </style>

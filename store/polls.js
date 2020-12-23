@@ -16,8 +16,9 @@ export const mutations = {
   },
   deleteCondition(state, id) {
     state.conditionals = state.conditionals.filter((c) => c.id !== id)
-    state.conditionalsOptions = _.omit(id, state.conditionalsOptions)
+    state.conditionalsOptions = _.omit(state.conditionalsOptions, id)
   },
+  changeType(state, id) {},
 }
 
 export const getters = {
