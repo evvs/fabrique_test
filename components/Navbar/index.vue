@@ -1,8 +1,9 @@
 <template>
   <nav>
+    <div class="logo-wrapper"><div class="logo"></div></div>
     <ul class="nav-buttons">
       <li v-for="(link, index) in links" :key="index" class="link-wrapper">
-        <nuxt-link :to="link.to" active-class="active">
+        <nuxt-link :to="link.to">
           <div
             class="inner-wrapper"
             :class="{ active: activeLink === link.name }"
@@ -59,8 +60,12 @@ export default {
 nav {
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-row-start: 2;
+  grid-row-start: 1;
   grid-row-end: 3;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-radius: 0 0 5px 0;
+
   .nav-buttons {
     min-height: 100px;
     padding: 5px;
@@ -100,6 +105,18 @@ nav {
     .link-icon {
       font-size: 1.7rem;
     }
+  }
+  .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+  }
+  .logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: rgba(100, 6, 6, 0.815);
   }
 }
 </style>

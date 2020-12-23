@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     redtirectToPolls() {
-      this.$router.replace({ path: 'polls' })
+      this.$router.replace({ path: 'polls/respondents' })
     },
   },
 }

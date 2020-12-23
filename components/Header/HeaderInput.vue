@@ -22,7 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 form {
-  width: 50%;
+  width: 60%;
   font-size: 0;
   display: flex;
   flex-wrap: nowrap;

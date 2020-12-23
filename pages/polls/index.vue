@@ -1,13 +1,11 @@
 <template>
-  <Polls />
+  <div></div>
 </template>
 
 <script>
-import Polls from '@/components/Polls'
-
 export default {
-  components: {
-    Polls,
+  created() {
+    this.$router.push({ path: '/polls/respondents' })
   },
 }
 </script>

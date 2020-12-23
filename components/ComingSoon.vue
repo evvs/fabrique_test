@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="flex-container">
     <img src="@/assets/soonstamp.svg" alt="coming-soon" />
   </div>
 </template>
@@ -9,7 +9,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.container {
+.flex-container {
   height: 100%;
   display: flex;
   justify-content: center;
