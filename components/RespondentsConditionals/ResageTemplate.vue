@@ -4,23 +4,25 @@
       :id="id"
       :order-number="orderNumber"
       :type="type"
-      backcolor="#fcf4bd"
+      backcolor="#fefdf5"
     />
-    <div v-for="option of options" :key="option.id" class="option">
-      Диапазон от
-      <input
-        type="number"
-        min="0"
-        :value="option.value.from"
-        @input="changeValue(option.id, 'from', $event.target.value)"
-      />
-      до
-      <input
-        type="number"
-        min="0"
-        :value="option.value.to"
-        @input="changeValue(option.id, 'to', $event.target.value)"
-      />
+    <div v-for="(option, index) of options" :key="option.id" class="option">
+      <p><span v-show="index > 0">или</span> Диапазон от</p>
+      <div class="input-wrapper">
+        <input
+          type="number"
+          min="0"
+          :value="option.value.from"
+          @input="changeValue(option.id, 'from', $event.target.value)"
+        />
+        до
+        <input
+          type="number"
+          min="0"
+          :value="option.value.to"
+          @input="changeValue(option.id, 'to', $event.target.value)"
+        />
+      </div>
     </div>
     <TemplateButtons :id="id"
       ><button class="addrange-btn" @click="addOption">
@@ -72,7 +74,7 @@ export default {
 <style lang="scss" scoped>
 .age-container {
   border-top: 1px solid rgba(230, 230, 230, 1);
-  background-color: #fcf4bd;
+  background-color: #fefdf5;
   .addrange-btn {
     cursor: pointer;
     color: #73a11c;
@@ -91,13 +93,21 @@ export default {
       border: 1px solid rgba(230, 230, 230, 1);
       border-radius: 5px;
       padding: 5px;
-      width: 5%;
+      width: 20%;
       &:focus,
       &:active {
         outline: none;
         border: 1px solid yellow;
       }
     }
+    p {
+      display: inline-block;
+      width: 150px;
+    }
+  }
+  .input-wrapper {
+    display: inline-block;
+    margin-left: 200px;
   }
 }
 </style>

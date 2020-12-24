@@ -4,7 +4,7 @@
       :id="id"
       :order-number="orderNumber"
       :type="type"
-      backcolor="#bde0fc"
+      backcolor="#f9fff9"
     />
     <div v-for="(option, index) of options" :key="option.id" class="option">
       <p class="option-name">
@@ -60,7 +60,7 @@ export default {
 <style lang="scss" scoped>
 .cardtype-container {
   border-top: 1px solid rgba(230, 230, 230, 1);
-  background-color: #bde0fc;
+  background-color: #f9fff9;
   .addtype-btn {
     cursor: pointer;
     color: #73a11c;
@@ -90,7 +90,7 @@ export default {
   }
   .option-name {
     display: inline-block;
-    width: 100px;
+    width: 150px;
   }
 }
 </style>

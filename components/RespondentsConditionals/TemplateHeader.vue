@@ -68,7 +68,7 @@ export default {
     border-radius: 10px;
   }
   p {
-    width: 100px;
+    width: 150px;
     display: inline-block;
   }
 }
