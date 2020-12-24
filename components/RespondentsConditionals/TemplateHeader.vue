@@ -46,13 +46,12 @@ export default {
   position: relative;
   padding: 15px 25px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   select {
+    flex-grow: 1;
+    margin-left: 200px;
     border: 1px solid rgba(230, 230, 230, 1);
     border-radius: 5px;
     padding: 5px;
-    width: 70%;
     &:focus,
     &:active {
       outline: none;
@@ -69,7 +68,8 @@ export default {
     border-radius: 10px;
   }
   p {
-    font-weight: bold;
+    width: 100px;
+    display: inline-block;
   }
 }
 </style>

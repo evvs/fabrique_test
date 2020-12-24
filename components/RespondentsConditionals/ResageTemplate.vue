@@ -6,7 +6,7 @@
       :type="type"
       backcolor="#fcf4bd"
     />
-    <div v-for="option of options" :key="option.id">
+    <div v-for="option of options" :key="option.id" class="option">
       Диапазон от
       <input
         type="number"
@@ -83,6 +83,20 @@ export default {
     &:hover {
       color: white;
       background-color: #73a11c;
+    }
+  }
+  .option {
+    padding: 15px 25px;
+    input {
+      border: 1px solid rgba(230, 230, 230, 1);
+      border-radius: 5px;
+      padding: 5px;
+      width: 5%;
+      &:focus,
+      &:active {
+        outline: none;
+        border: 1px solid yellow;
+      }
     }
   }
 }

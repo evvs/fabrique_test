@@ -7,7 +7,9 @@
       backcolor="#bde0fc"
     />
     <div v-for="(option, index) of options" :key="option.id" class="option">
-      <p>Тип {{ index + 1 }}</p>
+      <p class="option-name">
+        <span v-show="index > 0">или</span> Тип {{ index + 1 }}
+      </p>
       <select
         :value="option.value"
         @input="onSelect($event.target.value, option.id)"
@@ -73,15 +75,11 @@ export default {
   }
 }
 .option {
-  display: flex;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 25px;
-  align-items: center;
+  padding: 15px 25px;
   select {
     border: 1px solid rgba(230, 230, 230, 1);
     border-radius: 5px;
-    margin-left: 30%;
+    margin-left: 200px;
     padding: 5px;
     width: 50%;
     &:focus,
@@ -89,6 +87,10 @@ export default {
       outline: none;
       border: 1px solid yellow;
     }
+  }
+  .option-name {
+    display: inline-block;
+    width: 100px;
   }
 }
 </style>
