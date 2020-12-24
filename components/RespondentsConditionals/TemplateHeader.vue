@@ -1,6 +1,12 @@
 <template>
   <div class="template-header">
-    <div v-show="orderNumber !== 1" class="and">И</div>
+    <div
+      v-show="orderNumber !== 1"
+      class="and"
+      :style="{ backgroundColor: backcolor }"
+    >
+      И
+    </div>
     <p>Условие {{ orderNumber }}</p>
     <select v-model="paymentMethod">
       <option disabled value="init">Выберите условие</option>
@@ -17,6 +23,7 @@ export default {
     id: { type: String, required: true },
     orderNumber: { type: Number, required: true },
     type: { type: String, required: true },
+    backcolor: { type: String, required: true },
   },
   computed: {
     paymentMethod: {
@@ -60,6 +67,9 @@ export default {
     left: 20px;
     border: 1px solid rgba(224, 224, 224, 0.5);
     border-radius: 10px;
+  }
+  p {
+    font-weight: bold;
   }
 }
 </style>

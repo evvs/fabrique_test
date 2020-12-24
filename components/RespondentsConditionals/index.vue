@@ -1,11 +1,5 @@
 <template>
   <section>
-    <!-- <InitTemplate
-      v-for="(condition, index) of conditonals"
-      :id="condition.id"
-      :key="condition.id"
-      :order-number="index + 1"
-    /> -->
     <component
       :is="types[condition.type]"
       v-for="(condition, index) in conditonals"
@@ -22,7 +16,9 @@
 <script>
 import AddCondition from './AddCondition'
 import InitTemplate from './InitTemplate'
-import AgeTemplate from './AgeTemplate'
+import ResageTemplate from './ResageTemplate'
+import CardtypeTemplate from './CardtypeTemplate'
+import CardstatusTemplate from './CardstatusTemplate'
 
 export default {
   components: {
@@ -32,9 +28,9 @@ export default {
     return {
       types: {
         init: InitTemplate,
-        resage: AgeTemplate,
-        cardtype: '',
-        cardstatus: '',
+        resage: ResageTemplate,
+        cardtype: CardtypeTemplate,
+        cardstatus: CardstatusTemplate,
       },
     }
   },

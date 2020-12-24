@@ -1,6 +1,11 @@
 <template>
   <div class="init-container">
-    <TemplateHeader :id="id" :order-number="orderNumber" :type="type" />
+    <TemplateHeader
+      :id="id"
+      :order-number="orderNumber"
+      :type="type"
+      backcolor="#e7e7e7"
+    />
     <TemplateButtons :id="id" />
   </div>
 </template>
@@ -25,6 +30,6 @@ export default {
 <style lang="scss" scoped>
 .init-container {
   border-top: 1px solid rgba(230, 230, 230, 1);
-  background-color: rgba(235, 235, 235, 0.7);
+  background-color: #e7e7e7;
 }
 </style>

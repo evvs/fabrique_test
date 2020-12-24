@@ -1,6 +1,7 @@
 <template>
-  <div class="buttons-temaplate">
+  <div class="buttons-template">
     <div class="buttons-container">
+      <slot></slot>
       <button class="deleteBtn" @click="deleteCondition(id)">
         <font-awesome-icon :icon="['far', 'trash-alt']" /> Удалить условие
       </button>
@@ -20,7 +21,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.buttons-temaplate {
+.buttons-template {
   padding: 15px 25px;
   .buttons-container {
     margin-left: auto;
