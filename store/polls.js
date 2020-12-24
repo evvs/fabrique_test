@@ -3,13 +3,26 @@ import uuid from 'uuid'
 export const state = () => ({
   conditionals: [],
   conditionalsOptions: [],
+  isSending: false,
 })
+
+export const actions = {
+  async postPolls({ state, commit }) {
+    // testing next btn
+    commit('toggleIsSending')
+    const { data } = await this.$axios.$post('https://httpbin.org/post', {
+      conditionals: state.conditionals.filter((c) => c.type !== 'init'),
+      conditionalsOptions: state.conditionalsOptions,
+    })
+    commit('toggleIsSending')
+    alert(JSON.stringify(data))
+  },
+}
 
 export const mutations = {
   addCondition(state) {
     const id = uuid()
     const type = 'init'
-
     state.conditionals.push({ id, type })
   },
   deleteCondition(state, id) {
@@ -41,10 +54,14 @@ export const mutations = {
     const option = state.conditionalsOptions.find((o) => o.id === id)
     option.value = { ...option.value, ...value }
   },
+  toggleIsSending(state) {
+    state.isSending = !state.isSending
+  },
 }
 
 export const getters = {
   conditionals: (s) => s.conditionals,
+  isSending: (s) => s.isSending,
   getOptions: (state) => (parentId) => {
     return state.conditionalsOptions.filter(
       (option) => option.parentId === parentId

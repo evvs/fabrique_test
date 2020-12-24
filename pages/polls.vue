@@ -19,7 +19,9 @@
       </section>
       <footer>
         <button class="test-poll-btn">Протестировать опрос</button>
-        <button class="next-btn">Далее &#8594;</button>
+        <button class="next-btn" :disabled="isSending" @click="onNextClick">
+          Далее &#8594;
+        </button>
       </footer>
     </div>
   </div>
@@ -45,10 +47,16 @@ export default {
       const routsArr = routeName.split('-')
       return routsArr[routsArr.length - 1]
     },
+    isSending() {
+      return this.$store.getters['polls/isSending']
+    },
   },
   methods: {
     changeTab(path) {
       this.$router.push({ path: `/polls/${path}` })
+    },
+    onNextClick() {
+      this.$store.dispatch('polls/postPolls')
     },
   },
 }

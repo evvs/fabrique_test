@@ -23,11 +23,12 @@ export default {
 <style lang="scss" scoped>
 .buttons-template {
   padding: 15px 25px;
-  padding-left: 325px;
+  padding-left: 375px;
   .buttons-container {
     display: flex;
     justify-content: space-between;
     .deleteBtn {
+      margin-left: auto;
       cursor: pointer;
       color: rgb(173, 0, 0);
       background: transparent;

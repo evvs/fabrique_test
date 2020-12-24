@@ -93,6 +93,7 @@ nav {
       margin-bottom: 5px;
       .inner-wrapper {
         padding: 5px;
+        border: 2px solid transparent;
         border-radius: 5px;
 
         &:hover,
